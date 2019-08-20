@@ -1,0 +1,127 @@
+<%@page import="java.nio.channels.SeekableByteChannel"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@page import="javax.servlet.http.HttpSession" %>
+<%@page import="com.blog.bean.User" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="baidu-site-verification" content="CtYt4injW1" />
+<meta name="360-site-verification" content="a75dcb147688915b4cc7cfaa71e996a2" />
+<meta name="keywords" content="个人博客" />
+<meta name="keywords" content="博客搭建" />
+<meta name="keywords" content="博客网站" />
+<link rel="shortcut icon" href="../images/logo.png">
+<meta charset="utf-8">
+<meta charset="gb2312">
+<title>谈同个人博客♠★♠一个前端设计的热血青年</title>
+<meta name="keywords" content="谈同个人博客♠★♠一个前端设计的热血青年" />
+<meta name="description" content="谈同个人博客♠★♠一个前端设计的热血青年" />
+<link href="../css/base.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+<script type="text/javascript" src="../js/jquery.js"></script>
+<!-- 分割线 -->
+    <title>完整demo</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <script type="text/javascript" charset="utf-8" src="../utf8-jsp/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../utf8-jsp/ueditor.all.min.js"> </script>
+    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+    <script type="text/javascript" charset="utf-8" src="../utf8-jsp/lang/zh-cn/zh-cn.js"></script>
+
+    <style type="text/css">
+        div{
+            width:100%;
+        }
+    </style>
+  
+  
+</head>
+<body>
+<!-- -------------- -->
+<div id="wrapper">
+  <header>
+    <div class="headtop"></div>
+    <div class="contenttop">
+      <div class="logo f_l">谈同个人博客♠★♠一个前端设计的热血青年</div>
+      <div class="search f_r">
+        <form action="/e/search/index.php" method="post" name="searchform" id="searchform">
+          <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字" style="color: rgb(153, 153, 153);" onfocus="if(value=='请输入关键字'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='请输入关键字'}" type="text">
+          <input name="show" value="title" type="hidden">
+          <input name="tempid" value="1" type="hidden">
+          <input name="tbname" value="news" type="hidden">
+          <input name="Submit" class="input_submit" value="搜索" type="submit">
+        </form>
+      </div>
+      <div class="blank"></div>
+      <nav>
+        <div  class="navigation">
+          <ul class="menu">
+            <li><a href="index.jsp">网站首页</a></li>
+            <li><a href="#">关于我</a>
+              <ul>
+                <li><a href="about.html">个人简介</a></li>
+                <li><a href="listpic.html">个人相册</a></li>
+              </ul>
+            </li>
+            <li><a href="#">我的日记</a>
+              <ul>
+                <li><a href="newslistpic.html">个人日记</a></li>
+                <li><a href="newslistpic.html">学习笔记</a></li>
+              </ul>
+            </li>
+            <li><a href="newslistpic.html">技术文章</a> </li>
+            <li><a href="#">给我留言</a> </li>
+          </ul>
+        </div>
+      </nav>
+      <SCRIPT type=text/javascript>
+	// Navigation Menu
+	$(function() {
+		$(".menu ul").css({display: "none"}); // Opera Fix
+		$(".menu li").hover(function(){
+			$(this).find('ul:first').css({visibility: "visible",display: "none"}).slideDown("normal");
+		},function(){
+			$(this).find('ul:first').css({visibility: "hidden"});
+		});
+	});
+</SCRIPT>
+    </div>
+  </header>
+  <div class="container">
+    <div class="con_content">
+      <div class="about_box">
+        <h2 class="nh1"><span>您现在的位置是：<a href="/" target="_blank">网站首页</a>>><a href="#" target="_blank">【深入理解html5系列-文本标签】</a></span><b>【深入理解html5系列-文本标签】</b></h2>
+        <div class="f_box">
+          <p class="a_title">【深入理解html5系列-文本标签】H5新增语义化标签的应用</p>
+          <p class="p_title"></p>
+            <p class="box_p"><span>发布时间：2017-11-04 17:12:42</span><span>作者：谈同</span><span>来源：百度</span><span>点击：16012</span></p>
+          <!-- 可用于内容模板 -->
+        </div>
+        <ul class="about_content">
+<div>
+	<form action="UeditorServlet"  method="post" >
+	<input type="text" name="biaoti" placeholder="请输入标题" style="width:920px; height:35px;font-size:20px"/>
+    <h1>完整demo</h1>
+    <script id="editor" type="text/plain" style="width:1024px;height:500px;"></script>
+   	<button type="submit">提交</button>
+   	</form>
+   
+</div>
+	</ul>
+
+
+<script type="text/javascript">
+
+    //实例化编辑器
+    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    var ue = UE.getEditor('editor');
+
+</script>
+</body>
+</html>
